@@ -6,6 +6,8 @@ spring:
       server:
         git:
           uri: https://github.com/tjackiz/environment-variables.git
+          clone-on-start: true
+          default-label: develop
 
 server:
   port: ${port:8888}
