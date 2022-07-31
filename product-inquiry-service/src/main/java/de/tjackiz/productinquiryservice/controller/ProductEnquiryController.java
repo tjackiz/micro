@@ -23,7 +23,7 @@ public class ProductEnquiryController {
         // TODO move logic2service
         ProductEnquiryBean productEnquiryBean = productStockClient.checkProductStock(name, availability);
 
-        double totalPrice = productEnquiryBean.getTotalPrice() * unit;
+        double totalPrice = productEnquiryBean.getProductPrice().doubleValue() * unit;
         double discount = productEnquiryBean.getDiscountOffer();
         double discountPrice = totalPrice - totalPrice / 100;
 
