@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: product-stock-service
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:testdb;DB_CLOSE_DELAY=-1
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    # If you want to use data.sql to populate a schema created by Hibernate, set spring.jpa.defer-datasource-initialization to true
+    # www: https://stackoverflow.com/questions/67744719/spring-boot-data-jpa-with-h2-and-data-sql-table-not-found
+    defer-datasource-initialization: true
+
+server:
+  port: ${port:8800}
